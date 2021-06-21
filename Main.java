@@ -21,7 +21,8 @@ public class Main extends Application {
 
     Insets insets = new Insets(0,10,0,10);
     dataWriter data = new dataWriter();
-    String adresa = "C:\\Users\\42191\\Desktop\\Vocabolo";
+    String adresa = "adresa programu...";
+    String adresaObrazku = "adresa obrazku...";
 
     //STAGES
     Stage stage1;
@@ -63,7 +64,7 @@ public class Main extends Application {
         stage1.setWidth(330);
         stage1.setHeight(500);
 
-        Image image = new Image(new FileInputStream("C:\\Users\\42191\\Desktop\\vocabolo.png"));
+        Image image = new Image(new FileInputStream(adresaObrazku));
         ImageView imageView = new ImageView(image);
 
         //TextField - jazykText
