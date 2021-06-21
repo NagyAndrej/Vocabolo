@@ -131,7 +131,8 @@ public class Main extends Application {
         Button cvicit = new Button("Precvičovať");
         Button zapisat = new Button("Zapísať");
         Button spat = new Button("Späť");
-
+         
+        //BUTTON FUNCTIONS
         cvicit.setOnAction(e->{
             try {
                 oknoCvicenie();
@@ -288,13 +289,13 @@ public class Main extends Application {
 
 
 
-    public void onPlusClick(){
+    public void onPlusClick(){                                         //ADD NEW LANGUAGE
         jazykText.setVisible(true);
         saveBut.setVisible(true);
 
     }
 
-    public void onSaveClick() throws IOException {                     //Ulozi nazvy jazykov
+    public void onSaveClick() throws IOException {                     //SAVE NEW LANGUAGE
         String jazyk = jazykText.getCharacters().toString();
         data.createFileForeign(jazyk);
         data.createFileSK(jazyk);
