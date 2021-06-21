@@ -8,8 +8,9 @@ import java.util.Scanner;
 
 public class dataWriter {
 
-    String adresa = "C:\\Users\\42191\\Desktop\\Vocabolo\\";
+    String adresa = "umiestnenie programu...";
 
+       //CREATE A NEW FILE OF SLOVAK WORDS
        public void createFileSK(String nazov) throws IOException {
            try {
                File FileSk = new File(adresa + nazov + "Sk1.txt");
@@ -21,6 +22,7 @@ public class dataWriter {
 
        }
 
+    //FUNCTION WILL WRITE A NEW WORD INTO A SLOVAK WORDS FILE
     public void writeFileSk(String nazov, String slovo) throws IOException {
         FileWriter writerSK = new FileWriter(adresa + nazov + "Sk1.txt", true);
         slovo = slovo.toLowerCase();
@@ -29,6 +31,7 @@ public class dataWriter {
         writerSK.close();
        }
 
+    //READ FUNCTION
     public String readFileSk(String nazov, int index) throws FileNotFoundException {
         File skFile = new File(adresa + nazov + "Sk1.txt");
         Scanner scan = new Scanner(skFile);
@@ -51,8 +54,7 @@ public class dataWriter {
 
     }
 
-    //Create File of Foreign dictionery
-
+    //CREATE A NEW FILE OF FOREIGN WORDS
     public void createFileForeign(String nazov) throws IOException {
 
            try{
@@ -64,6 +66,7 @@ public class dataWriter {
     }
     }
 
+    //FUNCTION WILL WRITE A NEW WORD INTO A FOREIGN WORDS FILE
     public void writeFileForeign(String nazov, String slovo) throws IOException {
         FileWriter writerSK = new FileWriter(adresa + nazov + ".txt",true);
         slovo = slovo.toLowerCase();
@@ -73,6 +76,7 @@ public class dataWriter {
 
     }
 
+    //READ FUNCTION
     public String readFileForeign(String nazov, int index) throws FileNotFoundException {
         File File = new File(adresa + nazov+".txt");
         Scanner scan = new Scanner(File);
