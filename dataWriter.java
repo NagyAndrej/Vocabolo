@@ -47,8 +47,6 @@ public class dataWriter {
             }
                 scan.nextLine();
                 pocitadlo++;
-
-
         }
         return slovo;
 
@@ -60,10 +58,10 @@ public class dataWriter {
            try{
         File File = new File(adresa + nazov + ".txt");
         File.createNewFile();
-
-    }catch (Exception e){
-        e.getMessage();
-    }
+               
+        }catch (Exception e){
+                e.getMessage();
+        }
     }
 
     //FUNCTION WILL WRITE A NEW WORD INTO A FOREIGN WORDS FILE
@@ -92,8 +90,7 @@ public class dataWriter {
                 scan.nextLine();
                 pocitadlo++;
 
-
-        }
+    }   
         return slovo;
 
     }
